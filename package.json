@@ -1,0 +1,21 @@
+{
+  "name": "chandraportfolio",
+  "version": "1.0.0",
+  "description": "MERN stack portfolio application for Chandra Neel",
+  "main": "backend/server.js",
+  "scripts": {
+    "install-backend": "cd backend && npm install",
+    "install-frontend": "cd frontend && npm install",
+    "install": "npm run install-backend && npm run install-frontend",
+    "start-backend": "cd backend && npm run start",
+    "start-frontend": "cd frontend && npm start",
+    "dev": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "build": "cd backend && npm run seed && cd ../frontend && npm run build",
+    "start": "npm run start-backend"
+  },
+  "author": "Chandra Neel",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

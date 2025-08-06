@@ -1,0 +1,31 @@
+@keyframes fade-in-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes bounce { 0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); } 50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); } }
+
+.hero-section { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.hero-background { position: absolute; inset: 0; background-image: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a); }
+.hero-grid-pattern { position: absolute; inset: 0; opacity: 0.05; }
+.hero-content { position: relative; z-index: 10; text-align: center; padding: 0 1rem; max-width: 80rem; margin: 0 auto; }
+.hero-animation-wrapper { animation: fade-in-up 0.8s ease-out; }
+.hero-name { font-size: 2.25rem; font-weight: 700; margin-bottom: 2rem; line-height: 1.2; }
+@media (min-width: 640px) { .hero-name { font-size: 3rem; } }
+@media (min-width: 1024px) { .hero-name { font-size: 4rem; } }
+.hero-typing-animation { font-size: 1.25rem; font-weight: 300; margin-bottom: 3rem; height: 2.5rem; }
+@media (min-width: 640px) { .hero-typing-animation { font-size: 1.5rem; } }
+@media (min-width: 1024px) { .hero-typing-animation { font-size: 1.875rem; } }
+.hero-i-am { color: #d1d5db; }
+.hero-dynamic-text { color: #c084fc; font-weight: 500; }
+.hero-cursor { animation: pulse 1s step-end infinite; color: #c084fc; }
+.hero-description { font-size: 1.125rem; color: #9ca3af; margin-bottom: 4rem; max-width: 56rem; margin-left: auto; margin-right: auto; line-height: 1.75; }
+@media (min-width: 640px) { .hero-description { font-size: 1.25rem; } }
+.hero-cta-buttons { display: flex; flex-direction: column; gap: 1.5rem; justify-content: center; align-items: center; margin-bottom: 5rem; }
+@media (min-width: 640px) { .hero-cta-buttons { flex-direction: row; } }
+.hero-cta-button { padding: 1rem 2.5rem; border-radius: 9999px; font-weight: 600; font-size: 1.125rem; transition: all 0.3s; border: none; cursor: pointer; }
+.hero-cta-button:hover { transform: scale(1.05); }
+.primary { background-image: linear-gradient(to right, #9333ea, #db2777); color: white; }
+.primary:hover { box-shadow: 0 10px 15px -3px rgba(167, 139, 250, 0.25); background-image: linear-gradient(to right, #7e22ce, #be185d); }
+.secondary { border: 2px solid rgba(192, 132, 252, 0.5); color: #c084fc; background-color: transparent; }
+.secondary:hover { background-color: rgba(192, 132, 252, 0.1); border-color: #c084fc; }
+.hero-scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); }
+.scroll-indicator-content { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; animation: bounce 2s infinite; }
+.scroll-text { color: #9ca3af; font-size: 0.875rem; font-weight: 500; }
+.scroll-arrow { width: 1.25rem; height: 1.25rem; color: #c084fc; }

@@ -1,0 +1,71 @@
+@keyframes spin { to { transform: rotate(360deg); } }
+
+body {
+  background-color: #111827; /* A dark background for the whole page */
+  color: #f9fafb;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* DEBUG: Consolidated common styles here to avoid repetition */
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #a78bfa, #f472b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-underline {
+  width: 6rem;
+  height: 4px;
+  background: linear-gradient(to right, #a78bfa, #f472b6);
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+/* End of Consolidated Styles */
+
+
+.loading-screen, .error-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.loading-spinner {
+    animation: spin 1s linear infinite;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    border-top: 2px solid #a78bfa;
+    border-bottom: 2px solid #a78bfa;
+    margin-bottom: 1rem;
+}
+
+.error-screen {
+  color: #ef4444; /* red-500 */
+}
